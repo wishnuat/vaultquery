@@ -305,7 +305,7 @@ export default function App() {
             {byTerm
               ? <><b>{fmtNum(bulkCounts.found)}</b> of {fmtNum(byTerm.size)} terms found · </>
               : null}
-            <b>{fmtNum(summary.matched)}</b> files · <b>{fmtNum(summary.hits)}</b> matches · {fmtNum(summary.scanned)} files scanned in {(summary.elapsedMs / 1000).toFixed(1)} s
+            <b>{fmtNum(summary.matched)}</b> files · <b>{fmtNum(summary.hits)}</b> matches · {fmtNum(summary.scanned)} files scanned in {summary.elapsedMs < 1000 ? `${summary.elapsedMs} ms` : `${(summary.elapsedMs / 1000).toFixed(1)} s`}
             {summary.cancelled && " · stopped"}
           </span>
         )}

@@ -5,7 +5,9 @@
 **Search inside Excel, CSV, Word, PowerPoint, PDF and zip files, or look up a whole list of IDs at once. It shows
 the exact sheet, cell and row for every match, and needs no index.**
 
-<!-- screenshot: docs/screenshot.png  ·  demo gif: docs/bulk-lookup.gif -->
+![VaultQuery demo: bulk lookup of 10 IMEIs, then a regex search](docs/vaultquery-demo.gif)
+
+[Watch the demo in full quality (MP4, 29 s)](docs/vaultquery-demo.mp4). It was recorded headlessly from the real UI, replaying real engine results on the fictional `demo/` data; see `demo-video/`.
 
 Windows search finds file *names*. To find which of 4,000 downloaded reports mention a particular device ID, phone
 number or customer, you either keep a content index running in the background (on one machine that index grew to

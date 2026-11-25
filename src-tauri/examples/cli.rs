@@ -41,8 +41,14 @@ fn main() {
     };
     let out = Mutex::new(());
     let found: Mutex<BTreeMap<String, usize>> = Mutex::new(BTreeMap::new());
+    let json = std::env::var("VQ_JSON").is_ok();
     engine::run(opts, Arc::new(AtomicBool::new(false)), &|ev| {
         let _g = out.lock().unwrap();
+        if json {
+            // raw event stream, one JSON object per line (used to record the demo video)
+            println!("{}", serde_json::to_string(&ev).unwrap());
+            return;
+        }
         match ev {
             SearchEvent::Match { file } => {
                 println!("\n{}", file.path);

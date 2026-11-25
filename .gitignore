@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# demo video build output
+demo-video/out/
+demo-video/vite.log
+
