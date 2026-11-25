@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.rs text eol=lf
+src-tauri/tests/fixtures/** binary
+demo/** binary
