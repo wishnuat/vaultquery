@@ -1,6 +1,6 @@
 [package]
 name = "vaultquery"
-version = "0.1.0"
+version = "0.2.0"
 description = "Fast content search inside Excel, Word, PDF, CSV and zip files - no index"
 authors = ["wishnuat"]
 edition = "2024"
